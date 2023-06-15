@@ -7,10 +7,22 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    // public function index()
+    // {
+    //     
+    //     return view('user.user', ['user' => $data]);
+    // }
+
     public function index()
     {
-        $data = User::all();
-        dd($data);
-        return view('views.user', $data);
+        $user = new User;
+        $users = user::all();
+        return $users;
+        // return User::all();
+    }
+
+    public function show($id)
+    {
+        return User::find($id);
     }
 }

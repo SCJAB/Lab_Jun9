@@ -1,3 +1,3 @@
 <!-- @php
-    print_r($users);
+    print_r($user);
 @endphp -->
